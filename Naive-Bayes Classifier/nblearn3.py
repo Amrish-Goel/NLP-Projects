@@ -3,6 +3,7 @@ import string
 import re
 import operator
 import json
+import sys
 
 stop_words = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', "you're", "you've", "you'll", "you'd",
               'your',
@@ -241,16 +242,8 @@ def build_nb_model(training_data_dict):
 
 
 if __name__ == '__main__':
-    path = '/Users/amrish/Documents/NLP/HW1/op_spam_training_data'
+    path = sys.argv[1]
     training_data_dict = read_training_data(path)
 
     most_least_frequent_word_list = []
-    most_least_frequent_word_list = create_most_least_frequent_list()
-
-
-    # print(most_least_frequent_word_list)
-    training_data_dict = remove_most_least_frequent_word_list(training_data_dict, most_least_frequent_word_list)
-    print(training_data_dict)
-    # print(count_neg_tru)
-    build_nb_model(training_data_dict)
-
+    
