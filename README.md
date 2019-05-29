@@ -14,3 +14,9 @@ and corresponding numbers giving probabilities.
 with no external python libraries used.
 2. Run perceplearn.py and give input data as command line argument. It will create vanilla model file and average model file with words as features.
 3. Run percepclassify giving vanilla/average model file path as first argument and test data path as second argument.
+
+## Hidden Markov Model Part-of-Speech Tagger(HMM-POS Tagger)
+1. A Hidden Markov Model part-of-speech tagger for Italian, Japanese, and a surprise language. The training data are provided tokenized and tagged.
+2. Run hmmlearn3.py with giving input data as command line argument. It will create hmmmodel.txt with values of transition as well as emission states
+3. Run hmmdecode3.py which takes path of model file as input and using viterbi decoding gets the most suitable tagger and produces the output.txt which contains tagged test data.
+4. It has given the accuracy of 93% for japaneese, 91% for italian and 92% for surprise language.
